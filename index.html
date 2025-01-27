@@ -5,15 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/webdarya/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Darya | Веб-агентство</title>
-    <script>
-      (function(){
-        let redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect.replace('/webdarya/', '/'));
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

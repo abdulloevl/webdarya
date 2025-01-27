@@ -1,7 +1,7 @@
 import { useState, useEffect, Suspense, lazy } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
-  createBrowserRouter, 
+  createHashRouter, 
   RouterProvider,
   Route,
   createRoutesFromElements,
@@ -141,7 +141,7 @@ function App() {
     return () => clearTimeout(timer)
   }, [])
 
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route element={<Layout setIsRouteLoading={setIsRouteLoading} />}>
         <Route path="/" element={<HomePage />} />
@@ -170,13 +170,7 @@ function App() {
           }
         />
       </Route>
-    ),
-    {
-      basename: '/webdarya',
-      future: {
-        v7_relativeSplatPath: true
-      }
-    }
+    )
   );
 
   return (
