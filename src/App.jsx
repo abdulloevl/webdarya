@@ -172,6 +172,7 @@ function App() {
       </Route>
     ),
     {
+      basename: '/webdarya',
       future: {
         v7_relativeSplatPath: true
       }
